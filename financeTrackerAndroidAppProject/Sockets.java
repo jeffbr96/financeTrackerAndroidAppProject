@@ -1,3 +1,5 @@
+package financeTrackerAndroidAppProject;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.Socket;
@@ -9,7 +11,7 @@ public class Sockets {
 
     public static void main(String[] args){
         try{
-            s = new Socket("api", 8000);
+            s = new Socket("raspberrypi", 8000);
             pw = new PrintWriter(s.getOutputStream());
             pw.write("hello world");
             pw.flush();
